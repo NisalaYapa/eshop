@@ -1,136 +1,95 @@
-/* Header.css */
-
-/* Main container for the header */
 .Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #333; /* Dark background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Logo section styling */
-  .header__logo {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .header__logoImage {
-    margin-right: 10px;
-    color: #ffffff; /* White color for icon */
-  }
-  
-  .header__logoTitle {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff; /* White color for text */
-    letter-spacing: 1px;
-  }
-  
-  /* Search bar styling */
-  .header__search {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 500px;
-    background-color: #444; /* Darker background for search */
-    padding: 5px;
-    border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .header__searchInput {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 25px;
-    font-size: 16px;
-    background-color: #555; /* Dark background for input */
-    color: #fff; /* Light text for input */
-  }
-  
-  .header__seachIcon {
-    padding: 10px;
-    background-color: #666; /* Dark background for search icon */
-    border-radius: 50%;
-    cursor: pointer;
-    color: #fff; /* White color for the icon */
-  }
-  
-  /* Navigation section styling */
-  .header__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .nav__item {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .nav__itemLineOne {
-    font-size: 14px;
-    color: #bbb; /* Lighter gray text for line one */
-  }
-  
-  .nav__itemLineTwo {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff; /* White color for line two */
-  }
-  
-  /* Shopping Basket icon and count */
-  .itemBasket {
-    font-size: 28px;
-    margin-right: 8px;
-    color: #ffffff; /* White color for icon */
-  }
-  
-  .nav_basketCount {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ff5722; /* Orange color for basket count */
-  }
-  
-  /* Hover effect for navigation items */
-  .header__nav .nav__item:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-    color: #ff5722; /* Change color on hover */
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .Header {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-  
-    .header__logo {
-      margin-bottom: 10px;
-    }
-  
-    .header__search {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .header__nav {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 10px;
-    }
-  
-    .nav__item {
-      margin: 10px 0;
-    }
-  }
-  
+  position: fixed;  /* Keeps it fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Ensures it spans the full width of the screen */
+  height: 60px;
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  z-index: 1000;  /* Ensures it's always above other content */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.header__logoImage {
+  color: #ff9800;
+  margin-right: 5px;
+}
+
+.header__logoTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.header__searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+.header__seachIcon {
+  color: #ff9800;
+  padding: 5px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav__itemLineOne {
+  font-size: 12px;
+}
+
+.nav__itemLineTwo {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.itemBasket {
+  color: white;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.nav_basketCount {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* Add padding to the body to prevent content from being hidden behind the fixed header */
+body {
+  padding-top: 70px;
+  margin: 0; /* Ensure there's no margin around the body */
+}

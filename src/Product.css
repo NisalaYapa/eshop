@@ -1,110 +1,64 @@
-/* Product Container */
 .product {
-    flex: 1;
-    min-width: 280px;
-    max-width: 320px;
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 300px;
     padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a premium feel */
-    transition: all 0.3s ease-in-out;
-    overflow: hidden; /* Ensures rounded corners are not affected by inner elements */
-    position: relative;
+    margin: 10px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
 }
 
 .product:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: scale(1.05);
 }
 
-/* Product Info */
 .product__info {
     width: 100%;
-    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* Title Styling */
-.product__info p:first-of-type {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #333; /* Dark gray for elegance */
-    line-height: 1.6;
-    text-transform: capitalize; /* Neat text capitalization */
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+.product__info p {
+    margin: 5px 0;
 }
 
-/* Price Styling */
 .product__price {
     font-size: 1.2rem;
-    font-weight: 700;
-    color: #ff6f00; /* A rich, warm color for price */
-    margin: 10px 0;
+    font-weight: bold;
 }
 
-/* Star Rating */
 .product__rating {
     display: flex;
     justify-content: center;
-    font-size: 1.4rem;
-    color: #f9a825; /* Warm yellow for stars */
-    margin-top: 5px;
+    font-size: 1.5rem;
+    color: #ff9800;
 }
 
-/* Star icons */
-.product__rating span {
-    margin-right: 3px;
-    color: #f9a825; /* Default color for filled stars */
-}
-
-/* Empty Star */
-.product__rating span.empty {
-    color: #ccc; /* Light gray for empty stars */
-}
-
-/* Product Image */
-.product__image {
+.product img {
+    max-height: 200px;
     width: 100%;
-    max-height: 220px;
     object-fit: contain;
-    border-radius: 8px;
-    margin: 15px 0;
-    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
 }
 
-.product__image:hover {
-    transform: scale(1.05); /* Slight zoom effect for the image */
-}
-
-/* Add to Cart Button */
-.add__toCart {
-    background-color: #ff6f00; /* Warm color matching price */
-    color: #fff;
+.product button {
+    background-color: #ff9800;
     border: none;
-    padding: 12px 18px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    width: 100%; /* Full width button for better alignment */
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.add__toCart:hover {
-    background-color: #e65100; /* Darken the button on hover */
-    transform: translateY(-3px); /* Button lifts on hover */
-}
-
-/* Add subtle transition for entire product container */
-.product {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Accessibility Considerations */
-.product__info p,
-.product__price,
-.product__rating {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+.product button:hover {
+    background-color: #e68a00;
 }
