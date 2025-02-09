@@ -25,7 +25,10 @@ function Header() {
       <div className="header__nav">
         <div className="nav__item">
           <span className="nav__itemLineOne">Hello Guest</span>
+          <Link to="/login" style={{textDecoration: "none"}}>
           <span className="nav__itemLineTwo">SignIn</span>
+          </Link>
+          
         </div>
 
         <div className="nav__item">

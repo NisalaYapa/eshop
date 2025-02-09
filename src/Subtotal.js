@@ -31,7 +31,11 @@ function Subtotal() {
                 displayType="text"
                 thousandSeparator={true}
 
+    
+
             />
+
+            <button className="checkout">Proceed To Checkout</button>
         </div>
     )
 }
